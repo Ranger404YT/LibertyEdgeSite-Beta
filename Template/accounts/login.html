@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+{% block head %}
+    <link href="{{ url_for('static', filename='form.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+<body>
+{% block login %}
+{% endblock %}
+{% block body %}
+    <form action="/login" method="get" class="login-form">
+        <p><label>Login: </label><br><input class="login-input" style="cursor: text;"
+                type="text" name="login" value="" required />
+        <p><label>Password: </label><br><input class="login-input" style="cursor: text;"
+                type="password" name="password" value="" required />
+        <p><input type="submit" style="cursor: pointer;" value="Войти">
+        <button style="cursor: pointer;" onclick="window.location.href = '/registr/'">Зарегестрироватся</button>
+    </form>
+{% endblock %}
+</body>
+</html>

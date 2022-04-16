@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+{% block head %}
+    <link href="{{ url_for('static', filename='forum.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
+</head>
+<body>
+{% block body %}
+    <div class="content">
+        <h1>Посты</h1>
+        <ul>
+            {% for i in posts %}
+                <li><a href="{{ link }}{{ i[0] }}/">{{ i[1] }}</a></li><br>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+{% block login %}
+    <div class="User">
+        {% if logined == True %}
+            {{ username }}<br>
+            <button style="cursor: pointer;" onclick="window.location.href = '/forum/create/'">Создать пост</button>
+        {% else %}
+            <button style="cursor: pointer;" onclick="window.location.href = '/login/'">Войти</button>
+            <button style="cursor: pointer;" onclick="window.location.href = '/registr/'">Зарегестрироватся</button>
+        {% endif %}
+    </div>
+{% endblock %}
+</body>
+</html>

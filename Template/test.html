@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="profile-load">
+        <form action="{{url_for('test')}}" method="get" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Загрузить"><br>
+            <a href="{{url_for('logout')}}">Выйти из профиля</a>
+        </form>
+    </div>
+</body>
+</html>

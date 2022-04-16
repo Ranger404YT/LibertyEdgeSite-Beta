@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block menustyle %}
+    <script type="text/javascript" src="{{ url_for('static',filename='menu.js') }}"></script>
+    <link href="{{ url_for('static', filename='menu.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block basehead %}
+{% endblock %}
+{% block head %}
+{% endblock %}
+</head>
+<body>
+{% block menu %}
+    <div class="dropdown">
+        <input type="button" onclick="myFunction()"
+               style="background: url({{ url_for('static', filename='assets/logo.png') }}) center;
+               width: 300px;
+               height: 146px;"
+               class="dropbtn"/>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="/">Главная страница</a>
+            <a href="/forum/">Форум</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+{% endblock %}
+{% block basebody %}
+{% endblock %}
+{% block login %}
+{% endblock %}
+{% block body %}
+{% endblock %}
+</body>
+</html>

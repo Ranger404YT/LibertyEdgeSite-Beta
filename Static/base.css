@@ -1,0 +1,19 @@
+.flash.error {
+	border: 1px solid #FF4343;
+	position: fixed;
+	width: 160px;
+	background: #FF9C9C;
+}
+
+.flash.success {
+	border: 1px solid #21DB56;
+	position: fixed;
+	width: 160px;
+	background: #AEFFC5;
+}
+
+.User {
+	position: fixed;
+	right: 3px;
+	top: 2px;
+}

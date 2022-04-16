@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+{% block head %}
+{% endblock %}
+</head>
+<body>
+{% block body %}
+    <form style="margin-top: 20px;" action="{{ use }}" method="get" class="post-form">
+        <p><label>Название: </label><br><input class="name-input" style="cursor: text;"
+                type="text" name="name" value="{{ name_value }}" required />
+        <p><label>Содержание: </label><br><textarea class="body-input" style="cursor: text;"
+                                                  name="body" rows="7" cols="40" required>{{ body_value }}</textarea>
+        <p><input type="submit" style="cursor: pointer;" value="Выложить">
+    </form>
+{% endblock %}
+</body>
+</html>
